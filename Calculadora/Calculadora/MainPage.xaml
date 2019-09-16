@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Calculadora"
+             x:Class="Calculadora.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Bem Vindo a Calculadora!"
+        HorizontalOptions="Center"
+           VerticalOptions="Fill" />
+        <Entry x:Name="entryNumero"></Entry>
+        
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="Btn7"
+            Text="7"
+            Clicked="Btn8_Clicked"></Button>
+            <Button x:Name="Btn8"
+            Text="8"
+            Clicked="Btn8_Clicked"></Button>
+            <Button x:Name="Btn9"
+            Text="9"
+            Clicked="Btn9_Clicked"></Button>
+            <Button x:Name="BtnSomar"
+            Text="+"  
+                    
+                    TextColor="Chartreuse"
+            Clicked="ButtonCalcular_Clicked"></Button>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="Btn6"
+            Text="6"
+            Clicked="Btn6_Clicked"></Button>
+            <Button x:Name="Btn5"
+            Text="5"
+            Clicked="Btn5_Clicked"></Button>
+            <Button x:Name="Btn4"
+            Text="4"
+            Clicked="Btn4_Clicked"></Button>
+            <Button x:Name="BtnMultiplicar"
+            Text="*"
+                    TextColor="Chartreuse"
+            Clicked="BtnMultiplicar_Clicked"></Button>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="Btn3"
+            Text="3"
+            Clicked="Btn3_Clicked"></Button>
+            <Button x:Name="Btn2"
+            Text="2"
+            Clicked="Btn2_Clicked"></Button>
+            <Button x:Name="Btn1"
+            Text="1"
+            Clicked="Btn1_Clicked"></Button>
+            <Button x:Name="BtnSubtrair"
+            Text="-"
+                    TextColor="Chartreuse"
+            Clicked="BtnSubtrair_Clicked"></Button>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="Btn0"
+            Text="0"
+            Clicked="Btn0_Clicked"></Button>
+            <Button x:Name="BtnLimpar"
+            Text="CE"
+                    TextColor="Chartreuse"
+            Clicked="BtnLimpar_Clicked"></Button>
+            <Button x:Name="BtnIgual"
+            Text="="
+                    TextColor="Chartreuse"
+            Clicked="BtnIgual_Clicked"></Button>
+            <Button x:Name="BtnDividir"
+            Text="/"
+                    TextColor="Chartreuse"
+            Clicked="BtnDividir_Clicked"></Button>
+        </StackLayout>
+    </StackLayout>
+    
+
+
+
+
+</ContentPage>

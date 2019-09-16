@@ -22,8 +22,7 @@
             Text="9"
             Clicked="Btn9_Clicked"></Button>
             <Button x:Name="BtnSomar"
-            Text="+"  
-                    
+            Text="+"                      
                     TextColor="Chartreuse"
             Clicked="ButtonCalcular_Clicked"></Button>
         </StackLayout>

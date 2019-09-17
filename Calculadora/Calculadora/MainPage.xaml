@@ -4,73 +4,133 @@
              xmlns:local="clr-namespace:Calculadora"
              x:Class="Calculadora.MainPage">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="MediumAquamarine">        
         <!-- Place new controls here -->
         <Label Text="Bem Vindo a Calculadora!"
-        HorizontalOptions="Center"
-           VerticalOptions="Fill" />
+        HorizontalOptions="Center"   
+               FontAttributes="Italic"
+               TextColor="White"
+           VerticalOptions="Fill"/>
         <Entry x:Name="entryNumero"></Entry>
         
         <StackLayout Orientation="Horizontal">
             <Button x:Name="Btn7"
             Text="7"
-            Clicked="Btn8_Clicked"></Button>
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    
+            Clicked="Btn7_Clicked"></Button>
+            
             <Button x:Name="Btn8"
             Text="8"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
             Clicked="Btn8_Clicked"></Button>
+            
             <Button x:Name="Btn9"
             Text="9"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
             Clicked="Btn9_Clicked"></Button>
+            
             <Button x:Name="BtnSomar"
-            Text="+"                      
-                    TextColor="Chartreuse"
+            Text="+"
+                    FontSize="30"
+                    BackgroundColor="Orange"
+            TextColor="White"
             Clicked="ButtonCalcular_Clicked"></Button>
         </StackLayout>
+        
         <StackLayout Orientation="Horizontal">
             <Button x:Name="Btn6"
             Text="6"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
             Clicked="Btn6_Clicked"></Button>
+            
             <Button x:Name="Btn5"
             Text="5"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
             Clicked="Btn5_Clicked"></Button>
+            
             <Button x:Name="Btn4"
             Text="4"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
             Clicked="Btn4_Clicked"></Button>
+            
             <Button x:Name="BtnMultiplicar"
             Text="*"
-                    TextColor="Chartreuse"
+                    FontSize="30"
+                    BackgroundColor="Orange"
+            TextColor="White"
             Clicked="BtnMultiplicar_Clicked"></Button>
         </StackLayout>
+        
         <StackLayout Orientation="Horizontal">
             <Button x:Name="Btn3"
             Text="3"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
             Clicked="Btn3_Clicked"></Button>
+            
             <Button x:Name="Btn2"
             Text="2"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
             Clicked="Btn2_Clicked"></Button>
+            
             <Button x:Name="Btn1"
             Text="1"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
             Clicked="Btn1_Clicked"></Button>
+            
             <Button x:Name="BtnSubtrair"
             Text="-"
-                    TextColor="Chartreuse"
+                    FontSize="30"
+                    BackgroundColor="Orange"
+            TextColor="White"
             Clicked="BtnSubtrair_Clicked"></Button>
         </StackLayout>
+        
         <StackLayout Orientation="Horizontal">
             <Button x:Name="Btn0"
             Text="0"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    TextColor="Black"
             Clicked="Btn0_Clicked"></Button>
+            
             <Button x:Name="BtnLimpar"
             Text="CE"
-                    TextColor="Chartreuse"
+                    FontSize="20"
+                    BackgroundColor="Orange"
+            TextColor="White"
             Clicked="BtnLimpar_Clicked"></Button>
+            
             <Button x:Name="BtnIgual"
             Text="="
-                    TextColor="Chartreuse"
+                    FontSize="30"
+                    BackgroundColor="Orange"
+            TextColor="White"
             Clicked="BtnIgual_Clicked"></Button>
+            
             <Button x:Name="BtnDividir"
             Text="/"
-                    TextColor="Chartreuse"
+                    FontSize="30"
+                    BackgroundColor="Orange"
+            TextColor="White"
             Clicked="BtnDividir_Clicked"></Button>
         </StackLayout>
     </StackLayout>

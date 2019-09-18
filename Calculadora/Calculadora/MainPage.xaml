@@ -18,8 +18,7 @@
             Text="7"
                     FontSize="25"
                     BackgroundColor="White"
-                    TextColor="Black"
-                    
+                    TextColor="Black"                    
             Clicked="Btn7_Clicked"></Button>
             
             <Button x:Name="Btn8"

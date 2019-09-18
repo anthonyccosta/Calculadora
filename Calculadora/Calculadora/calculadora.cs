@@ -6,19 +6,29 @@ namespace Calculadora
 {
     public class calculadora
     {
-        double valor1;
-        double valor2;
-        double resultado;
-        string op;
-        string label;
 
-        public void Somar()
+        public double Somar(double valor1, double valor2)
         {
+            return valor1 + valor2;          
             
-            valor1 = Convert.ToDouble(label);
-            label = "";
-            op = "+";
-            
+        }
+
+        public double Subtrair(double valor1, double valor2)
+        {
+            return valor1 - valor2;
+
+        }
+
+        public double Dividir(double valor1, double valor2)
+        {
+            return valor1 / valor2;
+
+        }
+
+        public double Multiplicar(double valor1, double valor2)
+        {
+            return valor1 * valor2;
+
         }
     }
 }

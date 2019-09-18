@@ -12,13 +12,20 @@ namespace Calculadora
         public MainPage()
         {
             InitializeComponent();           
-        }                  
-        
-        private void ButtonCalcular_Clicked(object sender, EventArgs e)
-        {
-            calculadora cal = new calculadora();
-            cal.Somar();
+        }
 
+        public double resultado;
+        public double Valor1;
+        public double Valor2;
+        public string operacao;
+
+
+        private void ButtonCalcular_Clicked(object sender, EventArgs e)
+        {          
+
+            calculadora cal = new calculadora();
+            resultado = cal.Somar(Valor1, Valor2);
+            entryNumero.Text = Convert.ToString(resultado);
             
         }
 
@@ -54,7 +61,9 @@ namespace Calculadora
 
         private void BtnMultiplicar_Clicked(object sender, EventArgs e)
         {
-            
+            calculadora cal = new calculadora();
+            resultado = cal.Multiplicar(Valor1, Valor2);
+            entryNumero.Text = Convert.ToString(resultado);
         }
 
         private void Btn3_Clicked(object sender, EventArgs e)
@@ -75,7 +84,9 @@ namespace Calculadora
 
         private void BtnSubtrair_Clicked(object sender, EventArgs e)
         {
-
+            calculadora cal = new calculadora();
+            resultado = cal.Subtrair(Valor1, Valor2);
+            entryNumero.Text = Convert.ToString(resultado);
         }
 
         private void Btn0_Clicked(object sender, EventArgs e)
@@ -85,17 +96,38 @@ namespace Calculadora
 
         private void BtnLimpar_Clicked(object sender, EventArgs e)
         {
-            entryNumero.Text = "0";
+            entryNumero.Text = "";
         }
 
         private void BtnIgual_Clicked(object sender, EventArgs e)
         {
+            switch(operacao)
+            {
+                case "SOMA":
+                    resultado = Valor1 + Valor2;
+                    break;
 
+                case "SUBTRAIR":
+                    resultado = Valor1 - Valor2;
+                    break;
+
+                case "DIVIDIR":
+                    resultado = Valor1 / Valor2;
+                    break;
+
+                case "MULTIPLICAR":
+                    resultado = Valor1 * Valor2;
+                    break;
+            }
+            entryNumero.Text = resultado.ToString();
+            
         }
 
         private void BtnDividir_Clicked(object sender, EventArgs e)
         {
-
+            calculadora cal = new calculadora();
+            resultado = cal.Dividir(Valor1, Valor2);
+            entryNumero.Text = Convert.ToString(resultado);
         }
     }
 }

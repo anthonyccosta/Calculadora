@@ -5,21 +5,21 @@
              x:Class="Calculadora.MainPage">
 
     <StackLayout BackgroundColor="MediumAquamarine">        
-        <!-- Place new controls here -->
+        <!-- Layout do inicio da calculadora -->        
         <Label Text="Bem Vindo a Calculadora!"
         HorizontalOptions="Center"   
-               FontAttributes="Italic"
+               FontAttributes="Italic"               
                TextColor="White"
            VerticalOptions="Fill"/>
-        <Entry x:Name="entryNumero"></Entry>
+        <Entry x:Name="entryNumero"/> <!-- nome dado ao textBox -->
         
         <StackLayout Orientation="Horizontal">
-            <Button x:Name="Btn7"
-            Text="7"
+            <Button x:Name="Btn9"
+            Text="9"
                     FontSize="25"
                     BackgroundColor="White"
                     TextColor="Black"                    
-            Clicked="Btn7_Clicked"></Button>
+            Clicked="Btn9_Clicked"></Button>
             
             <Button x:Name="Btn8"
             Text="8"
@@ -28,12 +28,12 @@
                     TextColor="Black"
             Clicked="Btn8_Clicked"></Button>
             
-            <Button x:Name="Btn9"
-            Text="9"
+            <Button x:Name="Btn7"
+            Text="7"
                     FontSize="25"
                     BackgroundColor="White"
                     TextColor="Black"
-            Clicked="Btn9_Clicked"></Button>
+            Clicked="Btn7_Clicked"></Button>
             
             <Button x:Name="BtnSomar"
             Text="+"

@@ -15,18 +15,17 @@ namespace Calculadora
         }
 
         public double resultado;
-        public double Valor1;
-        public double Valor2;
-        public string operacao;
+        private double Valor1;
+        private double Valor2;
+        private string operacao;
 
 
         private void ButtonCalcular_Clicked(object sender, EventArgs e)
-        {          
-
-            calculadora cal = new calculadora();
-            resultado = cal.Somar(Valor1, Valor2);
-            entryNumero.Text = Convert.ToString(resultado);
-            
+        {
+            // this.Valor1 para representar que a variavel pertence a classe mainpage
+            Valor1 = Convert.ToDouble(entryNumero.Text);
+            entryNumero.Text = "";
+            this.operacao = "SOMA";
         }
 
         private void Btn7_Clicked(object sender, EventArgs e)
@@ -61,9 +60,10 @@ namespace Calculadora
 
         private void BtnMultiplicar_Clicked(object sender, EventArgs e)
         {
-            calculadora cal = new calculadora();
-            resultado = cal.Multiplicar(Valor1, Valor2);
-            entryNumero.Text = Convert.ToString(resultado);
+            // this.Valor1 para representar que a variavel pertence a classe mainpage
+            Valor1 = Convert.ToDouble(entryNumero.Text);
+            entryNumero.Text = "";
+            this.operacao = "MULTIPLICAR";
         }
 
         private void Btn3_Clicked(object sender, EventArgs e)
@@ -84,9 +84,10 @@ namespace Calculadora
 
         private void BtnSubtrair_Clicked(object sender, EventArgs e)
         {
-            calculadora cal = new calculadora();
-            resultado = cal.Subtrair(Valor1, Valor2);
-            entryNumero.Text = Convert.ToString(resultado);
+            // this.Valor1 para representar que a variavel pertence a classe mainpage
+            Valor1 = Convert.ToDouble(entryNumero.Text);
+            entryNumero.Text = "";
+            this.operacao = "SUBTRAIR";
         }
 
         private void Btn0_Clicked(object sender, EventArgs e)
@@ -101,33 +102,36 @@ namespace Calculadora
 
         private void BtnIgual_Clicked(object sender, EventArgs e)
         {
-            switch(operacao)
+            calculadora c = new calculadora();
+            this.Valor2 = Convert.ToDouble(entryNumero.Text);
+
+            switch(this.operacao)
             {
-                case "SOMA":
-                    resultado = Valor1 + Valor2;
+                case "SOMA":                    
+                    entryNumero.Text = c.Somar(this.Valor1, this.Valor2).ToString();
                     break;
-
-                case "SUBTRAIR":
-                    resultado = Valor1 - Valor2;
+                case "SUBTRACAO":
+                    entryNumero.Text = c.Subtrair(this.Valor1, this.Valor2).ToString();
                     break;
-
-                case "DIVIDIR":
-                    resultado = Valor1 / Valor2;
+                case "DIVISAO":
+                    entryNumero.Text = c.Dividir(this.Valor1, this.Valor2).ToString();
                     break;
-
-                case "MULTIPLICAR":
-                    resultado = Valor1 * Valor2;
+                case "MULTIPLICACAO":
+                    entryNumero.Text = c.Multiplicar(this.Valor1, this.Valor2).ToString();
+                    break;
+                default:
+                    DisplayAlert("EITA!", "A CALCULADORA OBTEVE UM ERRO!\n TENTE NOVAMENTE", "OK");
                     break;
             }
-            entryNumero.Text = resultado.ToString();
             
         }
 
         private void BtnDividir_Clicked(object sender, EventArgs e)
         {
-            calculadora cal = new calculadora();
-            resultado = cal.Dividir(Valor1, Valor2);
-            entryNumero.Text = Convert.ToString(resultado);
+            // this.Valor1 para representar que a variavel pertence a classe mainpage
+            Valor1 = Convert.ToDouble(entryNumero.Text);
+            entryNumero.Text = "";
+            this.operacao = "DIVIDR";
         }
     }
 }

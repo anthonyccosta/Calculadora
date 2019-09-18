@@ -7,8 +7,9 @@
     <StackLayout BackgroundColor="MediumAquamarine">        
         <!-- Layout do inicio da calculadora -->        
         <Label Text="Bem Vindo a Calculadora!"
-        HorizontalOptions="Center"   
-               FontAttributes="Italic"               
+        HorizontalOptions="Center"                
+               FontAttributes="Bold"
+               FontSize="20"
                TextColor="White"
            VerticalOptions="Fill"/>
         <Entry x:Name="entryNumero"/> <!-- nome dado ao textBox -->

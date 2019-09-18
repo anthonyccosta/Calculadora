@@ -98,6 +98,9 @@ namespace Calculadora
         private void BtnLimpar_Clicked(object sender, EventArgs e)
         {
             entryNumero.Text = "";
+            this.Valor1 = 0;
+            this.Valor2 = 0;
+            this.operacao = "";
         }
 
         private void BtnIgual_Clicked(object sender, EventArgs e)
@@ -132,6 +135,11 @@ namespace Calculadora
             Valor1 = Convert.ToDouble(entryNumero.Text);
             entryNumero.Text = "";
             this.operacao = "DIVIDR";
+        }
+
+        private void Label_SizeChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
